@@ -1,0 +1,157 @@
+
+        body {
+            font-family: 'Courier New', monospace; /* Font seperti kode programmer */
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #0f0f23, #1a1a2e, #16213e); /* Background gelap seperti editor kode */
+            color: #00ff88; /* Hijau neon seperti terminal */
+            overflow-x: hidden;
+            height: 100vh;
+            scroll-behavior: smooth;
+        }
+        /* Background animasi: Kode bahasa pemrograman yang bergerak */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .code-line {
+            position: absolute;
+            font-size: 14px;
+            color: rgba(0, 255, 136, 0.3);
+            white-space: nowrap;
+            animation: float 10s linear infinite;
+        }
+        .code-line:nth-child(1) { top: 10%; left: -100%; animation-delay: 0s; content: "print('Hello, Python!')"; }
+        .code-line:nth-child(2) { top: 20%; left: -100%; animation-delay: 2s; content: "console.log('JavaScript!');"; }
+        .code-line:nth-child(3) { top: 30%; left: -100%; animation-delay: 4s; content: "System.out.println('Java!');"; }
+        .code-line:nth-child(4) { top: 40%; left: -100%; animation-delay: 6s; content: "SELECT * FROM sql_table;"; }
+        .code-line:nth-child(5) { top: 50%; left: -100%; animation-delay: 8s; content: "fn main() { println!('Rust!'); }"; }
+        @keyframes float {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        h1, h2 {
+            font-size: 3em;
+            margin: 20px 0;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #00ff88; }
+            to { text-shadow: 0 0 20px #00ff88, 0 0 30px #00ff88; }
+        }
+        p {
+            max-width: 600px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .typing {
+            border-right: 2px solid #00ff88;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #00ff88; }
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00ff88;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .about-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+            animation: fadeInUp 1s ease-out;
+        }
+        .about-item h3 {
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .skill {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid #00ff88;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #00ff88;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .project {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            z-index: 10;
+        }
+        .nav a {
+            color: #00ff88;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ffffff;
+        }
+    
